@@ -1,1 +1,2 @@
-# MasterMindNumbersTkInter
+# Käyttöliittymäversio ohjelmasta MasterMindNumbers
+Ohjelma antaa käyttäjän arvata korkeintaan 10 kertaa nelinumeroista riviä, jossa voi käyttää numeroita 1-6. Syötettä tarkastetaan, kunnes se on oikeanlainen ja hyväksytään arvaukseksi. Jos käyttäjä arvaa rivin, häntä onnitellaan, ja ohjelman suorittaminen päättyy. Muussa tapauksessa ohjelman arpoma rivi kerrotaan käyttäjälle. Muun kuin oikean arvauksen tulos kerrotaan käyttäjälle muodossa oikeat numerot oikeilla paikoilla/oikeat väärillä paikoilla, esim. 2/2.
