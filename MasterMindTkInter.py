@@ -11,13 +11,14 @@ IKKUNAN_KORKEUS = 250
 def aloita():
     vastausikkuna['text'] = "Tervetuloa numeroiden Master Mindiin"
     r = satunnaisrivi()
-    print ("Ohjelma arpoi rivin "+r)
+    #print ("Ohjelma arpoi rivin "+r)
+    vastausikkuna['text'] = "Peli alkaa"
     rivi_ikkuna['text'] = r
     numeroikkuna['text'] = "1"
     tarkista_button['state'] = NORMAL
+    aloita_button['state'] = DISABLED
 
 def pelaa():
-    aloita_button['state'] = DISABLED
     arv_no = int(numeroikkuna.cget("text"))
     arvausrivi = Entry.get(arvauskentta)
     oikea = False
@@ -37,7 +38,7 @@ def pelaa():
         else:
             oikea_paikka, vaara_paikka = tarkasta_numerot(rivi,arvausrivi)
             arvauskentta.delete(0,'end')
-            vastausikkuna['text'] = "Oikeilla / väärillä paikoilla:",oikea_paikka,"/",vaara_paikka
+            vastausikkuna['text'] = "Oikeilla / väärillä paikoilla: "+str(oikea_paikka)+"/"+str(vaara_paikka)
             print(arv_no)
             print(arvausrivi)
             print(oikea_paikka,"/",vaara_paikka)
@@ -105,6 +106,7 @@ ruutu2.pack(side = RIGHT)
 
 arvauskentta = Entry(ruutu1) #Käyttäjä kirjoittaa arvauksensa
 arvauskentta.pack()
+arvauskentta.focus_set()
 
 nrotietoikkuna = Label(ruutu1,text = "Arvauksesi numero") 
 nrotietoikkuna.pack()
